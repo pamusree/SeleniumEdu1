@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 public class MyFirstTestNg 
 {
+	//methods annoated with enabled=false are ignored
 	@Test(priority = 1, enabled=false)
 	public void firstTestNgMethod()
 	{
