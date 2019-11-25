@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selnum.testng.MyFirstTestNg">
+      <class name="com.selnum.educasestudies.RegisteredUserException">
         <methods>
-          <include name="editUser"/>
-          <include name="createUser"/>
-          <include name="deleteUser"/>
+          <include name="openbrwsr"/>
+          <include name="regUserException"/>
+          <include name="clsbrwsr"/>
         </methods>
-      </class> <!-- com.selnum.testng.MyFirstTestNg -->
+      </class> <!-- com.selnum.educasestudies.RegisteredUserException -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
