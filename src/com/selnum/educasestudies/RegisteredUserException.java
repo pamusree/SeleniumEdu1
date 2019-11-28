@@ -8,7 +8,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -27,8 +30,14 @@ public class RegisteredUserException
    @BeforeMethod
    public void openbrwsr()
    {
-	   System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe");
-	   driver = new ChromeDriver();
+		/*
+		 * System.setProperty("webdriver.chrome.driver",
+		 * ".\\Drivers\\chromedriver.exe"); ChromeOptions coptions = new
+		 * ChromeOptions(); // coptions.addArguments( "disable-popup-blocking"); driver
+		 * = new ChromeDriver();
+		 */
+	   System.setProperty("webdriver.gecko.driver", ".\\Drivers\\geckodriver.exe");
+	   driver = new FirefoxDriver();
 	   driver.manage().window().maximize();
 	   driver.manage().deleteAllCookies();
 	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -36,7 +45,7 @@ public class RegisteredUserException
 	   driver.navigate().to("https://www.edureka.co/");
    }
    
-   @Test(enabled=false)
+   @Test(priority=1,enabled=false)
    public void logInRegUser()
    {
 	   Actions action = new Actions(driver);
@@ -75,7 +84,7 @@ public class RegisteredUserException
 	
    }
    
-   @Test
+   @Test(priority = 2)
    public void regUserException() 
    {
 	  Actions action = new Actions(driver);
@@ -83,27 +92,30 @@ public class RegisteredUserException
 	  signup.click();
 	  
 	  WebElement regemail = driver.findElement(By.id("sg_popup_email"));
-	  regemail.sendKeys("test@gmail.com");
+	  
+	  regemail.sendKeys("lekha.rama@hotmail.com");
+	  
 		/*
 		 * JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		 * jsExecutor.executeScript("$(arguments[0]).change();", regemail);
 		 */
 		
-		  WebElement selcode =
-		  driver.findElement(By.xpath("(//div[@class=\"selected-dial-code\"])[5]"));
+	  
+		  WebElement selcode =driver.findElement(By.xpath("(//div[@class=\"selected-dial-code\"])[5]"));
+		  wait.until(ExpectedConditions.elementToBeClickable(selcode));
 		  selcode.click();
 		 
   		
 		  WebElement ccode =driver.findElement(By.cssSelector(".sup_frm.signup-new-form>.inputfld>.allow-dropdown>.flag-container>.country-list>.country:nth-of-type(2)"));
-		  //("//ul[@class=\"country-list\"]"));
+		  
 		  ccode.click();
 		  System.out.println(ccode.getTagName()+ccode.getText());
 		    
 	  WebElement phnum = driver.findElement(By.id("sg_popup_phone_no"));
-	  phnum.sendKeys("1234567891");
+	  phnum.sendKeys("3313306776");
 	  
 	  WebElement subbtn = driver.findElement(By.cssSelector(".clik_btn_log.btn-block.signup-new-submit"));
-	  subbtn.click();
+	  subbtn.submit();
 	  
 	  WebElement exception = driver.findElement(By.xpath("//input[@id=\"sg_popup_email\"]/following-sibling::p"));
 	  String exmsg = exception.getText();
@@ -119,9 +131,9 @@ public class RegisteredUserException
 	  Reporter.log(exmsg);
    }
 
-   @AfterMethod(enabled = false)
+   @AfterMethod(enabled=false)
    public void clsbrwsr()
    {
-	   driver.close();
+	   driver.quit();
    }
 }
