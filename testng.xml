@@ -3,7 +3,7 @@
 <suite name="SeleniumEdu1">
   <test  name="Regression">
     <classes>
-      <class name="com.selnum.educasestudies.RegisteredUserException"/>
+      <class name="com.selnum.educasestudies.FlipkartScreenShot"/>
     </classes>
   </test> <!-- Regression -->
 </suite> <!-- SeleniumEdu1 -->

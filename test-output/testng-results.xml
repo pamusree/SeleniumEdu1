@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[3-4 days]]>
+    </line>
+    <line>
+      <![CDATA[Maximum login attempts reached. Retry in 24 hours.]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30797" started-at="2019-11-25T06:37:54 EST" finished-at="2019-11-25T06:38:25 EST">
+  <suite name="Default suite" duration-ms="51453" started-at="2019-12-05T14:01:16 EST" finished-at="2019-12-05T14:02:07 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30797" started-at="2019-11-25T06:37:54 EST" finished-at="2019-11-25T06:38:25 EST">
-      <class name="com.selnum.educasestudies.RegisteredUserException">
-        <test-method status="PASS" signature="openbrwsr()[pri:0, instance:com.selnum.educasestudies.RegisteredUserException@7b6e5c12]" name="openbrwsr" is-config="true" duration-ms="16197" started-at="2019-11-25T06:37:54 EST" finished-at="2019-11-25T06:38:10 EST">
+    <test name="Default test" duration-ms="51453" started-at="2019-12-05T14:01:16 EST" finished-at="2019-12-05T14:02:07 EST">
+      <class name="com.selnum.educasestudies.FlipkartScreenShot">
+        <test-method status="PASS" signature="openbrwsr()[pri:0, instance:com.selnum.educasestudies.FlipkartScreenShot@336206d8]" name="openbrwsr" is-config="true" duration-ms="17346" started-at="2019-12-05T14:01:16 EST" finished-at="2019-12-05T14:01:33 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openbrwsr -->
-        <test-method status="PASS" signature="logInRegUser()[pri:0, instance:com.selnum.educasestudies.RegisteredUserException@7b6e5c12]" name="logInRegUser" duration-ms="14520" started-at="2019-11-25T06:38:10 EST" finished-at="2019-11-25T06:38:25 EST">
+        <test-method status="PASS" signature="flipkart()[pri:0, instance:com.selnum.educasestudies.FlipkartScreenShot@336206d8]" name="flipkart" duration-ms="34012" started-at="2019-12-05T14:01:33 EST" finished-at="2019-12-05T14:02:07 EST">
           <reporter-output>
+            <line>
+              <![CDATA[3-4 days]]>
+            </line>
+            <line>
+              <![CDATA[Maximum login attempts reached. Retry in 24 hours.]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- logInRegUser -->
-      </class> <!-- com.selnum.educasestudies.RegisteredUserException -->
+        </test-method> <!-- flipkart -->
+      </class> <!-- com.selnum.educasestudies.FlipkartScreenShot -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

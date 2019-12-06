@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.selnum.educasestudies.RegisteredUserException">
+      <class name="com.selnum.educasestudies.FlipkartScreenShot">
         <methods>
           <include name="openbrwsr"/>
-          <include name="regUserException"/>
-          <include name="clsbrwsr"/>
+          <include name="flipkart"/>
         </methods>
-      </class> <!-- com.selnum.educasestudies.RegisteredUserException -->
+      </class> <!-- com.selnum.educasestudies.FlipkartScreenShot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
